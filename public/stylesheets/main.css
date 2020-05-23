@@ -1,0 +1,23 @@
+.thumbnail img {
+	width: 100%;
+}
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail .caption-full {
+	padding: 10px;
+}
+
+body::-webkit-scrollbar {
+	width: 0.80rem;
+}
+body::-webkit-scrollbar-track {
+	background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+	background: #6649b8;
+}
+.delete-form {
+	display: inline;
+}
