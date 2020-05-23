@@ -12,7 +12,7 @@ middleWareObj.checkCampOwnership = function(req, res, next) {
 				res.redirect('back');
 			} else {
 				// Added this block, to check if foundCampground exists, and if it doesn't to throw an error via connect-flash and send us back to the homepage
-				if (!foundCampground) {
+				if (!foundCamp) {
 					req.flash('error', 'Item not found.');
 					return res.redirect('back');
 				}

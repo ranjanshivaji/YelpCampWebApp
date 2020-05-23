@@ -3,7 +3,9 @@
 <div class="container">
 
     <div class="row">
-        <h1 style="text-align: center;">Edit Comment </h1>
+        <div class="col-md-12 text-center">
+            <h1 style="text-align: center;">Edit Comment </h1>
+        </div>
 
         <div style="width:30%; margin: 30px auto;">
         <form action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">

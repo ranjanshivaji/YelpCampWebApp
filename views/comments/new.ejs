@@ -3,7 +3,10 @@
 <div class="container">
 
     <div class="row">
-        <h1 style="text-align: center;">Add New Comment <%= campground.name %> </h1>
+        <div class="col-md-12 text-center">
+            <h1 style="text-align: center;">Add New Comment <%= campground.name %> </h1>        
+        </div>
+        
 
         <div style="width:30%; margin: 30px auto;">
         <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
