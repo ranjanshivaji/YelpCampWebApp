@@ -1,9 +1,14 @@
 <%- include("../partials/header.ejs")%>
 
-    
+
+  
 
 
 <div class="container">
+    <% if(currentUser && currentUser.isAdmin) { %>
+        <h1>Admin </h1>
+        <p>Pw-admin Un-admin</p>
+      <% } %>
     <header class="jumbotron">
         <div class="container ">
             <h1>Welcome to Yelp-Camp!</h1>
@@ -18,7 +23,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 
                 <div class="card" >
-                    <img src="<%= campground.image %>" class="card-img-top" alt="<%= campground.name%>">
+                    <img id="index-imgs"src="<%= campground.image %>" class="card-img-top" alt="<%= campground.name%>">
                     <div class="card-body">
                       <h5 class="card-title"><%= campground.name %></h5>
                       <p class="card-text"></p>

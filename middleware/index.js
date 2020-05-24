@@ -19,7 +19,7 @@ middleWareObj.checkCampOwnership = function(req, res, next) {
 				// If the upper condition is true this will break out of the middleware and prevent the code below to crash our application
 
 				//is the campgroundid associated with the user id?
-				if (foundCamp.author.id.equals(req.user._id)) {
+				if (foundCamp.author.id.equals(req.user._id) || req.user.isAdmin) {
 					next();
 				} else {
 					req.flash('error', 'You dont have permission to do that!');
@@ -46,7 +46,7 @@ middleWareObj.checkCommentOwnership = function(req, res, next) {
 				}
 				// If the upper condition is true this will break out of the middleware and prevent the code below to crash our application
 
-				if (foundComment.author.id.equals(req.user._id)) {
+				if (foundComment.author.id.equals(req.user._id) || req.user.isAdmin) {
 					//console.log('A');
 					next();
 				} else {

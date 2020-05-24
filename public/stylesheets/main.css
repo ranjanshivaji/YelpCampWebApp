@@ -1,6 +1,9 @@
 .card-img-top {
 	width: 100%;
 }
+#index-imgs {
+	height: 11em;
+}
 .thumbnail {
 	padding: 0;
 }
