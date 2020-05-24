@@ -1,4 +1,4 @@
-var port = process.env.PORT || 3000;
+//var port = process.env.PORT || 3000;
 var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
@@ -61,6 +61,6 @@ app.use('/campgrounds/:id/comments', commentRoutes);
 //                                                                               //
 // ============================================================================= //
 
-app.listen(port, function() {
+app.listen(process.env.PORT || 3000, function() {
 	console.log('Yelp Camp V12 Has started');
 });
